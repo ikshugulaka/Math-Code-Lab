@@ -1,0 +1,10 @@
+nums = [1,1,0,1,1,1,1,0,1]
+one = 0
+place = 0
+for num in nums:
+    if num == 1:
+        place += 1
+        one = max(one, place)
+    else:
+        place = 0
+print (one)
