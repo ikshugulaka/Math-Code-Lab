@@ -1,0 +1,36 @@
+array1= list(map(int, input("What will be your 1st array? ").split()))
+array2= list(map(int, input("What about 2nd array? ").split()))
+array3= list(map(int, input("And lastly, your 3rd array. ").split()))
+def merge(array1, array2, array3):
+    len1 = len(array1)
+    len2 = len(array2)
+    len3 = len(array3)
+    a1=0
+    a2=0
+    a3=0
+    arraym=[]
+    while a1< len1 and a2 < len2 and a3 < len3:
+        if array1[a1] <= array2[a2] and array1[a1] <= array3[a3]:
+            arraym.append(array1[a1])
+            a1+= 1
+        elif array2[a2] <= array1[a1] and array2[a2] <= array3[a3]:
+            arraym.append(array2[a2])
+            a2+= 1
+        else:
+            arraym.append(array3[a3])
+            a3+= 1
+    while a1 < len1:
+        arraym.append(array1[a1])
+        a1+= 1
+    while a2 < len2:
+        arraym.append(array2[a2])
+        a2+= 1
+    while a3 < len3:
+        arraym.append(array3[a3])
+        a3+= 1
+    return arraym
+
+
+
+
+print(merge(array1, array2, array3))
