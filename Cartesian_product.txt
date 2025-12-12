@@ -1,0 +1,10 @@
+array1= list(map(int, input("What will be your 1st array? ").split()))
+array2= list(map(int, input("What about 2nd array? ").split()))
+cp=[]
+for a in array1:
+    for b in array2:
+        cp.append((a, b))
+
+
+for pair in cp:
+    print(pair)
