@@ -1,0 +1,21 @@
+arr= list(map(int, input("Enter an array: ").split()))
+
+
+p1= 0
+win = 3
+p2=  win -1
+lent= len(arr)-1
+total = 0
+i = p1
+while i <= p2:
+    total = total + arr[i]
+    i = i + 1
+maximum = total
+while p2 < lent:
+    p1 += 1
+    p2 += 1
+    total -= arr[p1-1]
+    total += arr[p2]
+    if total > maximum:
+        maximum = total
+print(maximum)
