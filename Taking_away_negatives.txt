@@ -1,0 +1,13 @@
+gas  = [1, 2, 3, 4]
+cost = [2, 2, 1, 1]
+new =[]
+lens = len(gas)
+a=0
+while a < lens:
+    i1 = (gas[a]) - (cost[a])
+    if i1 >= 0:
+        new.append(gas[a])
+    a += 1
+print (new)
+
+
