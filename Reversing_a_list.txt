@@ -1,0 +1,12 @@
+array= list(map(int, input("Enter an array: ").split()))
+left = 0
+right = len(array)-1
+
+
+while left < right:
+    temp = array[left]
+    array[left] = array[right]
+    array[right] = temp
+    left += 1
+    right -=1
+print("Here's you reversed array: " , array)
