@@ -1,0 +1,11 @@
+prices = [3, 5, 7, 2, 4]
+money = 20
+book=0
+prices.sort(reverse=True)
+for price in prices:
+    if money >= price:
+        money = money - price
+        book = book + 1
+    else:
+        break
+print (book)
